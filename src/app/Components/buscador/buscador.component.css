@@ -45,6 +45,7 @@ body,html{
     float: right;
     display: flex;
     justify-content: center;
+    text-decoration: none;
     align-items: center;
     border-radius: 50%;
     color:white;
