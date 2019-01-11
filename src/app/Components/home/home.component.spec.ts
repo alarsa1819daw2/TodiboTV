@@ -23,3 +23,9 @@ describe('HomeComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+function fav1(){
+  localStorage.setItem('key','value');
+}
+
+
