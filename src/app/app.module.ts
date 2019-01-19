@@ -1,11 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
+import { MatVideoModule } from 'mat-video';
+import { RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Components/home/home.component';
-import { FilterPipe } from './filter.pipe';
 import { PeliculaComponent } from './Components/pelicula/pelicula.component';
-import { MatVideoModule } from 'mat-video';
+import { NavMenuComponent } from './Components/navmenu/navmenu.component';
+import { LoginComponent } from './Components/login/login.component';
 
 
 @NgModule({
@@ -13,12 +17,20 @@ import { MatVideoModule } from 'mat-video';
     AppComponent,
     HomeComponent,
     FilterPipe,
-    PeliculaComponent
+    PeliculaComponent,
+    NavMenuComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    MatVideoModule
+    MatVideoModule,
+    RouterModule.forRoot([
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent},
+      { path: 'login', component: LoginComponent}, //, canActivate: [AuthGuard]},
+      { path: '**', redirectTo: 'login' }
+  ])
   ],
   providers: [],
   bootstrap: [AppComponent]
