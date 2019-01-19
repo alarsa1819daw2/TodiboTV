@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './Components/home/home.component';
 import { FilterPipe } from './filter.pipe';
 import { PeliculaComponent } from './Components/pelicula/pelicula.component';
+import { MatVideoModule } from 'mat-video';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { PeliculaComponent } from './Components/pelicula/pelicula.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MatVideoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
