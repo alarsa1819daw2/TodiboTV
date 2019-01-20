@@ -10,6 +10,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { PeliculaComponent } from './Components/pelicula/pelicula.component';
 import { NavMenuComponent } from './Components/navmenu/navmenu.component';
 import { LoginComponent } from './Components/login/login.component';
+import { VideoComponent } from './Components/video/video.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { LoginComponent } from './Components/login/login.component';
     FilterPipe,
     PeliculaComponent,
     NavMenuComponent,
-    LoginComponent
+    LoginComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { LoginComponent } from './Components/login/login.component';
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'home', component: HomeComponent},
       { path: 'login', component: LoginComponent}, //, canActivate: [AuthGuard]},
+      { path: 'video', component: VideoComponent},
       { path: '**', redirectTo: 'login' }
   ])
   ],
