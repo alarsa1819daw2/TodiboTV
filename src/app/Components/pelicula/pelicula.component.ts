@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Pelicula } from 'src/app/Models/pelicula';
+import { Pelicula, PELICULAS } from 'src/app/Models/pelicula';
 
 @Component({
   selector: 'app-pelicula',
@@ -10,4 +10,5 @@ export class PeliculaComponent{
 
   @Input() pelicula: Pelicula;
 
+  pelisFav: string[];
 }

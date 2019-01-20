@@ -11,6 +11,7 @@ import { PeliculaComponent } from './Components/pelicula/pelicula.component';
 import { NavMenuComponent } from './Components/navmenu/navmenu.component';
 import { LoginComponent } from './Components/login/login.component';
 import { VideoComponent } from './Components/video/video.component';
+import { FavoritosComponent } from './Components/favoritos/favoritos.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { VideoComponent } from './Components/video/video.component';
     PeliculaComponent,
     NavMenuComponent,
     LoginComponent,
-    VideoComponent
+    VideoComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { VideoComponent } from './Components/video/video.component';
       { path: 'home', component: HomeComponent},
       { path: 'login', component: LoginComponent}, //, canActivate: [AuthGuard]},
       { path: 'video', component: VideoComponent},
+      { path: 'favoritos', component: FavoritosComponent},
       { path: '**', redirectTo: 'login' }
   ])
   ],
