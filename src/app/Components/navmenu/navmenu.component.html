@@ -3,16 +3,21 @@
       
       <div class='navbar-collapse collapse'>
           <ul class='nav navbar-nav'>
-              <li [routerLinkActive]="['link-active']">
+            <li [routerLinkActive]="['link-active']">
+                <a [routerLink]="['/login']">
+                    <span class='glyphicon glyphicon-user'></span> Login
+                </a>
+            </li>  
+            <li [routerLinkActive]="['link-active']">
                   <a [routerLink]="['/home']">
                       <span class='glyphicon glyphicon-home'></span> Inicio
                   </a>
               </li>               
               <li [routerLinkActive]="['link-active']">
-                  <a [routerLink]="['/login']">
-                      <span class='glyphicon glyphicon-user'></span> Login
-                  </a>
-              </li>
+                <a [routerLink]="['/favoritos']">
+                    <span class='glyphicon glyphicon-star'></span> Favoritos
+                </a>
+            </li>
           </ul>
       </div>
   </div>
