@@ -10,4 +10,12 @@ export class PeliculaComponent{
 
   @Input() pelicula: Pelicula;
 
+  pelisFav: string[];
+  cont: number = 0;
+
+  clickFav() {
+    console.log(this.cont);
+    localStorage.setItem(this.cont.toString(), this.pelicula.name);
+    this.cont = this.cont +1;
+  }
 }

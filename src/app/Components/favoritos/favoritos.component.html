@@ -1,0 +1,13 @@
+<br>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Películas favoritas</h2>
+    </div>
+    <div class="panel-body">
+        <div *ngFor="let fav of pelisFav"> {{fav}} </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-danger" href="" (click)="clickBorrarFav()">
+    Borrar Favoritos
+</button>
